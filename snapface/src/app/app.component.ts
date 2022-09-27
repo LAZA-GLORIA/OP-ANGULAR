@@ -12,7 +12,7 @@ export class AppComponent implements OnInit{
  ngOnInit() {
   this.faceSnaps = [
     {
-      title: "Archibald",
+      title: "Archibald Anne",
       description: "Mon meilleur ami depuis tout petit! Bald ",
       imageUrl: "https://i.ibb.co/cvf34Hb/pexels-cottonbro-5473957.jpg",
       createdDate: new Date(),
