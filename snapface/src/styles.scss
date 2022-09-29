@@ -12,8 +12,12 @@
     --color-subtitle-banner: #645244;
     --color-yellow-banner: #F2CD60;
 
+    --color-black-footer: #373F47;
+    --color-grey-footer: #99A1A6;
+    --color-white-footer: #F7F7F9;
+
     --size-title-banner: 1.5rem;
-    --size-subtitle-banner: 2rem;
+    --size-subtitle-banner: 2.5rem;
 
     --size-title-container: 2rem;
     --size-title-article: 2rem;
@@ -22,4 +26,8 @@
 
 a, button, fa-icon {
     cursor: pointer;
+}
+
+a {
+    text-decoration: none;
 }
