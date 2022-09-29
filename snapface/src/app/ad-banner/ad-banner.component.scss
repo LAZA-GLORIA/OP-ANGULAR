@@ -1,0 +1,28 @@
+.container-ad-banner {
+    background-image: url("../../assets/bedroom-interior.jpg");
+    height: 40rem;
+    background-position-y: 77rem;
+    background-position-x: -8rem;
+    margin: 3rem;
+}
+
+.resume-ad-banner {
+    width: 30%;
+    top: 34%;
+    position: relative;
+    left: 12%;
+    background-color: rgba(254, 254, 254, 0.7);
+    padding: 1.5rem 2.5rem;
+}
+
+button {
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border: solid 0.5px;
+    box-shadow: lightgray 3px 3px 7px;
+    outline: none;
+    font-weight: 500;
+    font-size: 0.7rem;
+    margin-top: 1rem;
+}

@@ -1,0 +1,14 @@
+footer {
+    background-color: grey;
+    padding-left: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.container-footer {
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 4rem;
+    padding-bottom: 2rem;
+}
+

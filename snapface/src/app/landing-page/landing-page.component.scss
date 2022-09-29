@@ -1,27 +1,44 @@
 .landing-block {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background-image: url("../../assets/interior-armchair.jpg");
+    height: 40rem;
+    display: flex;
+    background-position-x: -20rem;
+    background-position-y: 122rem;
   }
   
   .landing-links {
-    width: 100%;
-    text-align: center;
+    width: auto;
+    height: fit-content;
+    position: relative;
+    left: 42rem;
+    top: 17rem;
+    text-align: start;
   }
 
   button {
     background-color: transparent;
     box-sizing: border-box;
     padding: 5px 10px;
-    border: none;
+    border: solid 0.5px;
     box-shadow: lightgray 3px 3px 7px;
-    margin-right: 20px;
     outline: none;
-    font-size: 1rem;
     font-weight: 500;
+    font-size: 0.7rem;
     &:active {
       transform: translate(1px, 1px);
       box-shadow: lightgray 0 0 5px;
     }
+  }
+
+  h2 {
+    color: var(--color-title-banner);
+    font-size: var(--size-title-banner);
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    color: var(--color-subtitle-banner);
+    font-size: var(--size-subtitle-banner);
+    margin-top: 0px;
+    margin-bottom: 25px;
   }

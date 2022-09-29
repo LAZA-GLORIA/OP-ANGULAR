@@ -1,5 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 
-a, button {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+    //color palette 
+
+    --color-title-banner: #424B54;
+    --color-subtitle-banner: #645244;
+    --color-yellow-banner: #F2CD60;
+
+    --size-title-banner: 1.5rem;
+    --size-subtitle-banner: 2rem;
+
+    --size-title-container: 2rem;
+    --size-title-article: 2rem;
+
+  }
+
+a, button, fa-icon {
     cursor: pointer;
 }
