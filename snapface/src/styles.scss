@@ -8,13 +8,13 @@
 
     //color palette 
 
-    --color-title-banner: #424B54;
-    --color-subtitle-banner: #645244;
+    --color-title-banner: #323334;
+    --color-subtitle-banner: #A86A3D;
     --color-yellow-banner: #F2CD60;
 
-    --color-black-footer: #373F47;
-    --color-grey-footer: #99A1A6;
-    --color-white-footer: #F7F7F9;
+    --color-black-footer: #323334;
+    --color-grey-footer: #727374;
+    --color-white-footer: #FFFFFF;
 
     --size-title-banner: 1.5rem;
     --size-subtitle-banner: 2.5rem;
@@ -22,7 +22,12 @@
     --size-title-container: 2rem;
     --size-title-article: 2rem;
 
+    --fontsize-mobile: 0.9rem;
+    --fontsize-landscape: 1.2rem;
+    --fontsize-laptop: 1.5rem;
+
   }
+
 
 a, button, fa-icon {
     cursor: pointer;

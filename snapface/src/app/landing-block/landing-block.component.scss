@@ -1,0 +1,69 @@
+.landing-block {
+    background-image: url("../../assets/interior-armchair.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: var(--fontsize-mobile);
+    display: flex;
+    padding-bottom: 5rem;
+    margin-top: 1rem;
+  }
+  
+  .landing-links {
+    width: 60%;
+  }
+
+  .blank {
+    width: 40%;
+  }
+
+  button {
+    background-color: transparent;
+      box-sizing: border-box;
+      padding: 5px 10px;
+      margin-right: 20px;
+      
+      &:active {
+        transform: translate(1px, 1px);
+    }
+  }
+
+  h2 {
+    color: var(--color-title-banner);
+    margin: 1rem 0;
+  }
+
+  h3 {
+    color: var(--color-subtitle-banner);
+    margin: 1.3rem 0 1.3rem 0;
+    font-size: 1.3rem;
+  }
+
+ 
+@media only screen and (min-width : 768px) {
+    
+  .landing-block {
+    padding-bottom: 35rem;
+    margin-top: 2rem;
+    font-size: var(--fontsize-landscape);
+  }
+
+  h2, h3 {
+    font-size: 2.2rem;
+  }
+  .landing-links {
+    width: 50%;
+    position: relative;
+    top: 10rem;
+  }
+
+  .blank {
+    width: 50%;
+  }
+
+  button {
+    font-size: var(--fontsize-landscape);
+  }
+  }
+
+
+  

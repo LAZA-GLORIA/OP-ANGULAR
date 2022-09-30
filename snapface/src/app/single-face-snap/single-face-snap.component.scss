@@ -1,5 +1,57 @@
 .face-snap-card {
     box-sizing: border-box;
+    margin: 2rem 1rem;
+    font-size: var(--fontsize-mobile);
+    img {
+      width: 100%;
+    }
+    h2 {
+      margin-bottom: 0;
+    }
+    p {
+      padding: 0.5rem 0;
+    }
+    button {
+      background-color: transparent;
+      box-sizing: border-box;
+      padding: 5px 10px;
+      margin-right: 20px;
+      font-size: 0.9rem;
+      &:active {
+        transform: translate(1px, 1px);
+      }
+    }
+  }
+    .snapped {
+      background-color: rgba(lightgreen, 0.4);
+      color: darkgreen;
+      button {
+        box-shadow: lightgreen 3px 3px 7px;
+        color: darkgreen;
+        &:active {
+          box-shadow: lightgreen 0 0 5px;
+        }
+      }
+    }
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+      .face-snap-card {
+        font-size: var(--fontsize-landscape);
+        
+        img {
+          height: 80vh;
+        }
+   
+
+
+      button {
+        font-size: var(--fontsize-landscape);
+      }
+      }
+    }
+    /**
+    .face-snap-card {
+    box-sizing: border-box;
     width: 30%;
     height: 50%;
     margin: 20px auto;
@@ -44,4 +96,4 @@
         }
       }
     }
-
+*/

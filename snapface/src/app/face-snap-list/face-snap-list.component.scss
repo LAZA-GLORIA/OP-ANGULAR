@@ -1,5 +1,9 @@
 .container-facesnap-list {
-    display: flex;
     flex-wrap: wrap;
-    height: 25rem;
 }
+
+@media only screen and (min-width : 1024px) {
+    .container-facesnap-list {
+        display: flex;
+    }
+    }

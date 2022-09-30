@@ -1,20 +1,24 @@
 header {
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
+}
+
+h1 {
+  font-size: 1.8rem;
 }
 
 .container-logo-icons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  margin: 0 4rem 1rem 4rem;
+  margin: 0 1rem 1rem 1rem;
 }
 
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5rem;
+  height: 4rem;
 }
 
 a {
@@ -37,3 +41,15 @@ a {
 hr {
   margin: 0 6rem;
 }
+
+@media only screen and (min-width : 768px) {
+  a {
+    font-size: var(--fontsize-landscape);
+  }
+  }
+
+  @media only screen and (min-width : 1024px) {
+    a {
+      font-size: var(--fontsize-landscape);
+    }
+    }

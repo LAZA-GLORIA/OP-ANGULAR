@@ -1,15 +1,25 @@
 footer {
     background-color: var(--color-black-footer);
-    padding-left: 2.5rem;
-    padding-bottom: 1rem;
-    
+    padding: 0.5rem 1rem;
+    font-size: var(--fontsize-mobile);
+    color: var(--color-white-footer);  
 }
 
-.container-footer {
-    color: var(--color-white-footer);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 4rem;
-    padding: 2rem;
+@media only screen and (min-width : 768px) {
+    footer {
+        background-color: var(--color-black-footer);
+        padding: 0.5rem 1rem;
+        font-size: var(--fontsize-landscape);
+    }
 }
+
+@media only screen and (min-width : 1024px) {
+    .container-footer {
+        color: var(--color-white-footer);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 4rem;
+        padding: 2rem;
+    }
+    }
 

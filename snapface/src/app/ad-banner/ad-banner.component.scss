@@ -1,28 +1,68 @@
 .container-ad-banner {
     background-image: url("../../assets/bedroom-interior.jpg");
-    height: 40rem;
-    background-position-y: 77rem;
-    background-position-x: -8rem;
-    margin: 3rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0.5rem;
+    padding-bottom: 3rem;
+}
+
+h3 {
+    color: #7B5136;
 }
 
 .resume-ad-banner {
-    width: 30%;
-    top: 34%;
-    position: relative;
-    left: 12%;
+    width: 90%;
     background-color: rgba(254, 254, 254, 0.7);
     padding: 1.5rem 2.5rem;
+    font-size: var(--fontsize-mobile);
+}
+
+p {
+    margin: 0.5rem 0;
 }
 
 button {
     background-color: transparent;
-    box-sizing: border-box;
-    padding: 5px 10px;
-    border: solid 0.5px;
-    box-shadow: lightgray 3px 3px 7px;
-    outline: none;
-    font-weight: 500;
-    font-size: 0.7rem;
-    margin-top: 1rem;
+      box-sizing: border-box;
+      padding: 5px 10px;
+      margin-top: 0.7rem;
+      &:active {
+        transform: translate(1px, 1px);
+    }
 }
+
+@media only screen and (min-width : 768px) {
+
+    .container-ad-banner {
+        padding-bottom: 23rem;
+    }
+
+    .resume-ad-banner {
+        position: relative;
+        top: 16rem;
+        left: 10rem;
+        width: 70%;
+        font-size: var(--fontsize-landscape);
+    }
+
+    button {
+        font-size: var(--fontsize-landscape);
+    }
+}
+
+
+@media only screen and (min-width : 1024px) {
+
+    .container-ad-banner {
+        padding-bottom: 38rem;
+    }
+
+    .resume-ad-banner {
+        font-size: var(--fontsize-laptop);
+        position: relative;
+        top: 12rem;
+    }
+}
+
+
+

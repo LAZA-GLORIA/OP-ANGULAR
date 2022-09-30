@@ -22,6 +22,7 @@ import { MoreLinkFooterComponent } from './more-link-footer/more-link-footer.com
 import { ContactFooterComponent } from './contact-footer/contact-footer.component';
 import { AdBannerComponent } from './ad-banner/ad-banner.component';
 import { TopRatingComponent } from './top-rating/top-rating.component';
+import { LandingBlockComponent } from './landing-block/landing-block.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { TopRatingComponent } from './top-rating/top-rating.component';
     MoreLinkFooterComponent,
     ContactFooterComponent,
     AdBannerComponent,
-    TopRatingComponent
+    TopRatingComponent,
+    LandingBlockComponent
   ],
   imports: [
     BrowserModule,
