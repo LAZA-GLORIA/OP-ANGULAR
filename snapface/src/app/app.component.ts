@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { delay, interval, map, mergeMap, of, take, tap } from 'rxjs';
+//import { delay, interval, map, mergeMap, of, take, tap } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +7,13 @@ import { delay, interval, map, mergeMap, of, take, tap } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  redTrainsCalled = 0; 
-  yellowTrainsCalled = 0;
+  //redTrainsCalled = 0; 
+  //yellowTrainsCalled = 0;
 
- ngOnInit() {
-  interval(500).pipe(
+ ngOnInit() {}
+}
+  /**
+   *   interval(500).pipe(
     take(10),
     map(value => value % 2 === 0 ? 'rouge' : 'jaune'),
     tap(color => console.log(`La lumière s'allume en %c${color}`, `color: ${this.translateColor(color)}`)),
@@ -33,11 +35,12 @@ getTrainObservable$(color: 'rouge' | 'jaune') {
 translateColor(color: 'rouge' | 'jaune') {
   return color === 'rouge' ? 'red' : 'yellow';
 }
-}
+   
+}*/
 
 /**
- * interval$!: Observable<string>;
- *  ngOnInit() {
+ interval$!: Observable<string>;
+  ngOnInit() {
   this.interval$ = interval(1000).pipe(
     filter(value => value % 3 === 0),
     map(value => value % 2 === 0 ?
@@ -50,5 +53,4 @@ translateColor(color: 'rouge' | 'jaune') {
 
  logger(text: string) {
   console.log(`Log ${text}`);
- }
- */
+ } */
