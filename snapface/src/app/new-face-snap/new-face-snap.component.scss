@@ -1,0 +1,74 @@
+.form-card {
+    box-sizing: border-box;
+    width: 50%;
+    margin: 20px auto;
+    padding: 10px 30px;
+    box-shadow: lightgray 4px 4px 20px;
+    h2 {
+        justify-content: center;
+        display: flex;
+      }
+
+  label {
+    display: flex;
+    align-self: flex-start;
+    font-weight: bolder;
+  }
+
+  button {
+    box-sizing: border-box;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    &:active {
+      transform: translate(1px, 1px);
+      box-shadow: lightgray 0 0 5px;
+    }
+  }
+}
+
+  .face-snap-card {
+    box-sizing: border-box;
+    width: 50%;
+    margin: 20px auto;
+    padding: 10px 30px;
+    box-shadow: lightgray 4px 4px 20px;
+    img {
+      width: 100%;
+    }
+    h2 {
+      margin-bottom: 0;
+      justify-content: center;
+      display: flex;
+    }
+    p {
+      font-weight: 300;
+      font-size: 16px;
+    }
+  }
+  
+  .form-group {
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  input {
+    width: 25rem;
+    height: 1.5rem;
+  }
+
+  textarea {
+    width: 25rem;
+    height: 6rem;
+  }
+  
+  .action-buttons {
+    width: 100%;
+  }
+  
+  button {
+    display: block;
+    margin: 20px auto;
+  }
