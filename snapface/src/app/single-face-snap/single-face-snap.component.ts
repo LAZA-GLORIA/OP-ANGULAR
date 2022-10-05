@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable, tap } from 'rxjs';
 import { FaceSnap } from '../models/face-snap.model';
 import { FaceSnapsService } from '../services/face-snaps.services';
 
@@ -9,7 +10,10 @@ import { FaceSnapsService } from '../services/face-snaps.services';
   styleUrls: ['./single-face-snap.component.scss']
 })
 export class SingleFaceSnapComponent implements OnInit {
-  faceSnap!: FaceSnap;
+  //faceSnap!: FaceSnap;
+
+  faceSnap$!: Observable<FaceSnap>;
+
   buttonText!: string;
 
 
@@ -19,17 +23,33 @@ export class SingleFaceSnapComponent implements OnInit {
   ngOnInit() {
     this.buttonText = "Like !";  
     const faceSnapParamsId = +this.route.snapshot.params["id"];
-    this.faceSnap = this.faceSnapsService.getFaceSnapById(faceSnapParamsId);
+    this.faceSnap$ = this.faceSnapsService.getFaceSnapById(faceSnapParamsId);
+    //this.faceSnap = this.faceSnapsService.getFaceSnapById(faceSnapParamsId);
+
   }
 
-  onSnap() {
-    if (this.buttonText === "Like !") {
-      this.faceSnapsService.getFaceSnapByIdLikes(this.faceSnap.id, 'Like !');
-      this.buttonText = "DisLike !"
+  onSnap(id: number) {
+     if (this.buttonText === "Like !") {
+      this.faceSnap$ = this.faceSnapsService.setSnapLikes(id, 'Like !').pipe(
+        tap(() => {
+          //Une autre implémentation plus simple 
+          //this.faceSnap$ = this.faceSnapsService.getFaceSnapById(id);
+          this.buttonText = "DisLike !";
+        })
+      )
+      //plus besoin de souscription
+   //   ).subscribe();
+     
     } else {
-        this.faceSnapsService.getFaceSnapByIdLikes(this.faceSnap.id, 'Like !');
-        this.buttonText = "Like !"   
+        this.faceSnapsService.setSnapLikes(id, 'Dislike !').pipe(
+          tap(() => {
+            this.faceSnap$ = this.faceSnapsService.getFaceSnapById(id);
+            this.buttonText = "Like !";
+          })
+        ).subscribe();
+       
     }
+    
   }
 
 }

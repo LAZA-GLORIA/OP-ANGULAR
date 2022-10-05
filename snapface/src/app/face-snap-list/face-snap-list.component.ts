@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { interval, Observable, Subject, takeUntil, tap } from 'rxjs';
+//import { interval, Observable, Subject, takeUntil, tap } from 'rxjs';
+import { Observable } from 'rxjs';
 import { FaceSnap } from '../models/face-snap.model';
 import { FaceSnapsService } from '../services/face-snaps.services';
 

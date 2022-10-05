@@ -1,4 +1,3 @@
-import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -42,7 +41,7 @@ export class NewFaceSnapComponent implements OnInit {
   }
 
   onSubmitForm(): void {
-    this.faceSnapsService.AddFaceSnap(this.snapForm.value);
+    //this.faceSnapsService.AddFaceSnap(this.snapForm.value);
     this.router.navigateByUrl("/facesnaps");
   }
 

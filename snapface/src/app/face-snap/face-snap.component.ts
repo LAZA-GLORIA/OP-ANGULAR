@@ -19,22 +19,11 @@ export class FaceSnapComponent implements OnInit {
     private router: Router
     ) {}
 
-  ngOnInit() {
-    this.buttonText = "Like !";  
-  }
-
-  onSnap() {
-    if (this.buttonText === "Like !") {
-      this.faceSnapsService.getFaceSnapByIdLikes(this.faceSnap.id, 'Like !');
-      this.buttonText = "DisLike !"
-    } else {
-        this.faceSnapsService.getFaceSnapByIdLikes(this.faceSnap.id, 'Like !');
-        this.buttonText = "Like !"   
-    }
-  }
+  ngOnInit() {}
 
   onViewFaceSnap(){
     this.router.navigateByUrl(`facesnaps/${this.faceSnap.id}`);
+   console.log("facesnaps/" + this.faceSnap.id);
   }
 
 }
