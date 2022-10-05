@@ -49,8 +49,26 @@ export class FaceSnapsService {
               })),
              switchMap(faceSnapMisaJour => 
               this.http.put<FaceSnap>(`http://localhost:3000/facesnaps/${id}`, faceSnapMisaJour))
-            )}
+            )
+        }
+
+        addFaceSnap(formValue: FaceSnap): Observable<FaceSnap> {
+          return this.getAllFaceSnaps().pipe(
+            map(
+              listFaceSnap => [...listFaceSnap].sort((a,b) => a.id - b.id)),
+            map(sortedListFaceSnap => sortedListFaceSnap[sortedListFaceSnap.length - 1]),
+            map(previousFaceSnap => ({
+              ...formValue, 
+              snaps: 0, 
+              createdDate: new Date(),
+              id: previousFaceSnap.id + 1
+            })),
+            switchMap(newFaceSnap => this.http.post<FaceSnap>(`http://localhost:3000/facesnaps`, newFaceSnap))
+          );
+        }
       
+  
+      }     
 
       
       
@@ -66,4 +84,3 @@ export class FaceSnapsService {
       // }
       
 
-}
