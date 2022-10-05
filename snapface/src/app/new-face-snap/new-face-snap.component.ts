@@ -42,7 +42,7 @@ export class NewFaceSnapComponent implements OnInit {
   }
 
   onSubmitForm(): void {
-    this.faceSnapsService.AddFaceSap(this.snapForm.value);
+    this.faceSnapsService.AddFaceSnap(this.snapForm.value);
     this.router.navigateByUrl("/facesnaps");
   }
 

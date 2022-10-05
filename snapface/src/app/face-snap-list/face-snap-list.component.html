@@ -1,3 +1,3 @@
-<app-face-snap *ngFor="let element of faceSnaps" [faceSnap]="element"></app-face-snap>
+<app-face-snap *ngFor="let element of faceSnaps$ | async" [faceSnap]="element"></app-face-snap>
 <!-- <app-face-snap [faceSnap]="mySnap" *ngIf="mySnap.snaps > 5"></app-face-snap>-->
 <!-- element est un alias pour chaque elements du tableau faceSnaps-->
